@@ -1,0 +1,42 @@
+<html><head><meta charset="UTF-8"><link rel="import" href="summit-app.html"></head><body><dom-module id="summit-pick-stream">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      :host ul {
+        padding: 0px;
+        margin: 0px;
+      }
+      :host ul li {
+        list-style-type: none;
+      }
+      :host .card:hover {
+        cursor: pointer;
+      }
+      :host .card.selected {
+        background-color: #daf2fa;
+      }
+    </style>
+
+    <div class="question">
+      <h1>Please select your stream:</h1>
+      <hr>
+    </div>
+
+    <ul>
+      <template is="dom-repeat" items="[[_getStreams(eventData)]]" initial-count="1">
+        <li on-click="_selectStream" data-stream-id$="{{item.id}}">
+            <div class$="[[_classForCard(item, currentProfile)]]">
+              <h1>{{item.name}}</h1>
+            </div>
+        </li>
+      </template>
+    </ul>
+
+  </template>
+
+  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object},_getStreams:function(e){return e.streams||[]},_selectStream:function(e){var r=e.model.item;this.fire("update-user-profile",{stream:r.id})},_classForCard:function(e,r){return e.id===r.stream?"card selected":"card"}});</script>
+</dom-module>
+</body></html>

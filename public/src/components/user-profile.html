@@ -1,0 +1,11 @@
+<html><head><link rel="import" href="../../bower_components/polymer/polymer.html">
+
+</head><body><dom-module id="user-profile">
+  <template>
+    <style>
+    </style>
+  </template>
+
+  <script>Polymer({is:"user-profile",properties:{currentProfile:{type:Object,notify:!0},profileWatch:{computed:"_watchProfile(currentProfile)",observe:"_observeProfile(currentProfile)"}},updateProfile:function(e){this.set("currentProfile",Object.assign({},this.currentProfile,e))},_watchProfile:function(e){console.log("User profile changed, new:"),console.dir(e)}});</script>
+</dom-module>
+</body></html>
