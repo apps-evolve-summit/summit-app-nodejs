@@ -1,6 +1,9 @@
 ﻿var express = require('express');
 var app = express();
 var port = process.env.port || 1337;
+var root = path.join(__dirname, 'public');
+
+app.use(express.static(root));
 
 app.get('/say-hello', function (req, res) {
     res.send('Hello World!');
