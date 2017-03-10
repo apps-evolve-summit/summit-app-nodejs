@@ -1,6 +1,7 @@
 ﻿var express = require('express');
 var app = express();
 var port = process.env.port || 1337;
+var path = require('path');
 var root = path.join(__dirname, 'public');
 
 app.use(express.static(root));
