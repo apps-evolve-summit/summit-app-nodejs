@@ -18,7 +18,10 @@
     "polymer": "Polymer/polymer#^1.6.0",
     "iron-list": "PolymerElements/iron-list#^1.4.1",
     "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
-    "iron-icons": "PolymerElements/iron-icons#^1.2.0"
+    "iron-icons": "PolymerElements/iron-icons#^1.2.0",
+    "paper-item": "PolymerElements/paper-item#^1.2.1",
+    "google-map": "GoogleWebComponents/google-map#^1.2.0",
+    "paper-fab": "PolymerElements/paper-fab#^1.2.1"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
