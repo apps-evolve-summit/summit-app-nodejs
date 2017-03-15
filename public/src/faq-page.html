@@ -46,7 +46,7 @@
       :host {
         display: block;
 
-        padding: 10px 20px;
+        padding: 8px;
       }
 
       :host ul {
@@ -65,11 +65,23 @@
         height: 35px;
         width: 35px;
       }
-
       .first-item {
         font-weight: bold;
       }
-
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: gray;
+      }
+      .place iron-icon {
+        color: red;
+      }
+      .phone {
+        margin-bottom: 10px;
+      }
+      .phone iron-icon {
+        color: green;
+      }
       :host google-map {
         height: 250px;
       }
@@ -86,7 +98,15 @@
 
                <hr>
 
-               <paper-icon-item>
+               <paper-icon-item class="hotel">
+                   <iron-icon icon="maps:local-hotel" item-icon=""></iron-icon>
+                   <paper-item-body two-line="">
+                     <div class="first-item">NH Conference Center</div>
+                     <div>Mörfelden</div>
+                   </paper-item-body>
+               </paper-icon-item>
+
+               <paper-icon-item class="place">
                    <iron-icon icon="maps:place" item-icon=""></iron-icon>
                    <paper-item-body two-line="">
                      <div class="first-item">Hessenring 9</div>
@@ -94,12 +114,14 @@
                    </paper-item-body>
                </paper-icon-item>
 
-               <paper-icon-item>
-                   <iron-icon icon="maps:local-phone" item-icon=""></iron-icon>
-                   <paper-item-body one-line="">
-                     <div class="first-item">+49 06105 2040</div>
-                   </paper-item-body>
-               </paper-icon-item>
+              <a href="tel:+49-06105-2040">
+                 <paper-icon-item class="phone">
+                     <iron-icon icon="maps:local-phone" item-icon=""></iron-icon>
+                     <paper-item-body one-line="">
+                       <div class="first-item">+49 06105 2040</div>
+                     </paper-item-body>
+                 </paper-icon-item>
+               </a>
 
               <google-map fit-to-marker="" latitude="49.9845645" longitude="8.5855526" disabledefaultui="" api-key="AIzaSyDBrnA2vOeYHU0NTtN6XQuyXIlX6JYllxc">
                 <google-map-marker animation="DROP" latitude="49.9845645" longitude="8.5855526" draggable="false"></google-map-marker>

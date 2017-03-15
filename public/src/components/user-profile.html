@@ -6,6 +6,6 @@
     </style>
   </template>
 
-  <script>Polymer({is:"user-profile",properties:{currentProfile:{type:Object,notify:!0},profileWatch:{computed:"_watchProfile(currentProfile)",observe:"_observeProfile(currentProfile)"}},updateProfile:function(e){this.set("currentProfile",Object.assign({},this.currentProfile,e))},_watchProfile:function(e){console.log("User profile changed, new:"),console.dir(e)}});</script>
+  <script>Polymer({is:"user-profile",properties:{currentProfile:{type:Object,notify:!0}},updateProfile:function(e){this.set("currentProfile",Object.assign({},this.currentProfile,e))}});</script>
 </dom-module>
 </body></html>
