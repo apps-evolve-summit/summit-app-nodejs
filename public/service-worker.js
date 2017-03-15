@@ -49,7 +49,7 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["/bower_components/webcomponentsjs/webcomponents-lite.min.js","02395895d5d08242c6ba93518a6da2c5"],["/images/LocalCommunities_DE.png","bf236b5fe0a85f97a4181bd35ad7672f"],["/images/coffee-24.ico","28f093600a37483db6a0da2c4b0b0354"],["/images/coffee-32.ico","7828a5f58d947c4a9c59ea759d982ff0"],["/images/favicon.ico","82b34d0faee76b89a9f946763428f668"],["/images/logo-capgemini-white.png","9b25d4ac4ac2b1fdf5ec1f836065eb96"],["/images/manifest/icon-128x128.png","a9d83a0e75bcfdf6005d207fb623d1a7"],["/images/manifest/icon-144x144.png","901e7f1a0aaee77a50805e2cb9cf0849"],["/images/manifest/icon-152x152.png","adbf4030f349c7caf86a670d004a9013"],["/images/manifest/icon-192x192.png","3a7a1c24911a4e65258f31a606790841"],["/images/manifest/icon-384x384.png","e880b156e9e6b4661854fee1f259efcf"],["/images/manifest/icon-48x48.png","be5241c1dcf2833e1e7067b1e63a86e8"],["/images/manifest/icon-512x512.png","3d75df8b4831fe1141f8ada7d8eb45ea"],["/images/manifest/icon-72x72.png","1b143c0b5be7c19d390491eb2bd95821"],["/images/manifest/icon-96x96.png","9f8c8bd4d7a787efd88fd2f3ee4407db"],["/index.html","539377cea3a51547e2152a6d3ca01d97"],["/manifest.json","3a87de72eedd75bbe4f411ee451126b9"],["/src/404-page.html","b39dceb5730c5aad151551c3a26320ae"],["/src/faq-page.html","e8f89f5117521695e29a58b1dbc1be6a"],["/src/pick-stream-page.html","e5620b7ca7922bd1ae0b14122d3ee580"],["/src/summit-app.html","625d328f686d767cf7b400517a0c837d"],["/src/time-schedule-page.html","3f1c6296cab5ccd7b8920612994b65d0"]];
+var PrecacheConfig = [["/bower_components/webcomponentsjs/webcomponents-lite.min.js","02395895d5d08242c6ba93518a6da2c5"],["/images/LocalCommunities_DE.png","bf236b5fe0a85f97a4181bd35ad7672f"],["/images/coffee-24.ico","28f093600a37483db6a0da2c4b0b0354"],["/images/coffee-32.ico","7828a5f58d947c4a9c59ea759d982ff0"],["/images/favicon.ico","82b34d0faee76b89a9f946763428f668"],["/images/logo-capgemini-white.png","9b25d4ac4ac2b1fdf5ec1f836065eb96"],["/images/manifest/icon-128x128.png","a9d83a0e75bcfdf6005d207fb623d1a7"],["/images/manifest/icon-144x144.png","901e7f1a0aaee77a50805e2cb9cf0849"],["/images/manifest/icon-152x152.png","adbf4030f349c7caf86a670d004a9013"],["/images/manifest/icon-192x192.png","3a7a1c24911a4e65258f31a606790841"],["/images/manifest/icon-384x384.png","e880b156e9e6b4661854fee1f259efcf"],["/images/manifest/icon-48x48.png","be5241c1dcf2833e1e7067b1e63a86e8"],["/images/manifest/icon-512x512.png","3d75df8b4831fe1141f8ada7d8eb45ea"],["/images/manifest/icon-72x72.png","1b143c0b5be7c19d390491eb2bd95821"],["/images/manifest/icon-96x96.png","9f8c8bd4d7a787efd88fd2f3ee4407db"],["/index.html","539377cea3a51547e2152a6d3ca01d97"],["/manifest.json","3a87de72eedd75bbe4f411ee451126b9"],["/src/404-page.html","b39dceb5730c5aad151551c3a26320ae"],["/src/faq-page.html","e8f89f5117521695e29a58b1dbc1be6a"],["/src/pick-stream-page.html","e5620b7ca7922bd1ae0b14122d3ee580"],["/src/summit-app.html","44f37f33f045d6a382eb31eba5feecfe"],["/src/time-schedule-page.html","3f1c6296cab5ccd7b8920612994b65d0"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1--' + (self.registration ? self.registration.scope : '') + '-';
 
@@ -276,7 +276,7 @@ self.addEventListener('fetch', function(event) {
 
 // Runtime cache configuration, using the sw-toolbox library.
 
-toolbox.router.get(/data/(.*)/, toolbox.networkFirst, {});
+toolbox.router.get(/data\/(.*)/, toolbox.networkFirst, {});
 
 
 
