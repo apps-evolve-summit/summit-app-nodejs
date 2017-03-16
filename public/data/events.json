@@ -27,16 +27,19 @@
     "name": "Registration",
     "description": "Please register at reception desk",
     "labels": [4],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 2,
     "onDay": 1,
     "startTime": "10:00",
     "endTime": "10:15",
-    "name": "Greeting",
-    "description": "Hello world",
+    "name": "Welcome + Organization",  "description": "Hello world",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [1, 11]
   },{
     "id": 3,
     "onDay": 1,
@@ -45,25 +48,9 @@
     "name": "CG-Architects Go Inside Out",
     "description": "Description for 'CG-Architects Go Inside Out'",
     "labels": [1],
-    "stream": null
-  },{
-    "id": 4,
-    "onDay": 1,
-    "startTime": "10:45",
-    "endTime": "12:15",
-    "name": "Web Innovation Stream",
-    "description": "Sample lecture from Web Innovation Stream",
-    "labels": [1],
-    "stream": 1
-  },{
-    "id": 5,
-    "onDay": 1,
-    "startTime": "10:45",
-    "endTime": "12:15",
-    "name": "Cloud Stream",
-    "description": "Sample lecture from Cloud Stream",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": 1,
+    "presenters": [14]
   },{
     "id": 6,
     "onDay": 1,
@@ -72,7 +59,9 @@
     "name": "Lunch",
     "description": "Enjoy your meal",
     "labels": [5],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 7,
     "onDay": 1,
@@ -81,7 +70,9 @@
     "name": "Greetings from CTO",
     "description": "Description for 'Greetings from CTO'",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [15]
   },{
     "id": 8,
     "onDay": 1,
@@ -90,25 +81,9 @@
     "name": "Digital Transformation of the advertising sector through data-driven marketing",
     "description": "Description for 'Digital Transformation of the advertising sector through data-driven marketing'",
     "labels": [1],
-    "stream": null
-  },{
-    "id": 9,
-    "onDay": 1,
-    "startTime": "14:30",
-    "endTime": "15:30",
-    "name": "Second Web Innovation Stream",
-    "description": "Second sample lecture from Web Innovation Stream",
-    "labels": [1],
-    "stream": 1
-  },{
-    "id": 10,
-    "onDay": 1,
-    "startTime": "14:30",
-    "endTime": "15:30",
-    "name": "Second Cloud Stream",
-    "description": "Second sample lecture from Cloud Stream",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": 1,
+    "presenters": [16]
   },{
     "id": 11,
     "onDay": 1,
@@ -117,25 +92,9 @@
     "name": "Coffee break",
     "description": "Opportunity to wake up and do some networking",
     "labels": [5, 2],
-    "stream": null
-  },{
-    "id": 12,
-    "onDay": 1,
-    "startTime": "15:45",
-    "endTime": "17:15",
-    "name": "Third Web Innovation Stream",
-    "description": "Third sample lecture from Web Innovation Stream",
-    "labels": [1],
-    "stream": 1
-  },{
-    "id": 13,
-    "onDay": 1,
-    "startTime": "15:45",
-    "endTime": "17:15",
-    "name": "Third Cloud Stream",
-    "description": "Third sample lecture from Cloud Stream",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 14,
     "onDay": 1,
@@ -144,7 +103,9 @@
     "name": "Stream report out",
     "description": "Each stream gives a 15 minutes summary of their discussions, shares established goals",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [13]
   },{
     "id": 15,
     "onDay": 1,
@@ -153,7 +114,9 @@
     "name": "Closing of Day 1",
     "description": "Description for Closing of Day 1",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [11]
   },{
     "id": 16,
     "onDay": 1,
@@ -162,7 +125,9 @@
     "name": "Break",
     "description": "",
     "labels": [2],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 17,
     "onDay": 1,
@@ -171,7 +136,9 @@
     "name": "Dinner",
     "description": "Enjoy your meal",
     "labels": [5],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },
 
 
@@ -186,47 +153,57 @@
     "id": 101,
     "onDay": 2,
     "startTime": "8:30",
-    "endTime": "9:45",
+    "endTime": "9:15",
     "name": "Report Back Summit 2016",
-    "description": "Information related to major change in iCSD: centers",
+    "description": "Summary from the previous summit",
     "labels": [1],
-    "stream": null
-  },{
+    "stream": null,
+    "room": 1,
+    "presenters": [17]
+  }, {
     "id": 102,
     "onDay": 2,
-    "startTime": "9:45",
-    "endTime": "10:00",
-    "name": "Coffee break",
-    "description": "Opportunity to wake up and do some networking",
-    "labels": [5, 2],
-    "stream": null
-  },{
-    "id": 103,
-    "onDay": 2,
-    "startTime": "10:00",
-    "endTime": "10:30",
-    "name": "Enterprise iPaas",
-    "description": "Description for 'Enterprise iPaas'",
+    "startTime": "9:15",
+    "endTime": "9:45",
+    "name": "Major change in iCSD: centers",
+    "description": "What waits for our organization in near future",
     "labels": [1],
-    "stream": null
-  },{
-    "id": 104,
-    "onDay": 2,
-    "startTime": "10:30",
-    "endTime": "12:00",
-    "name": "First Web Innovation Stream D2",
-    "description": "First sample lecture from Web Innovation Stream D2",
-    "labels": [1],
-    "stream": 1
-  },{
+    "stream": null,
+    "room": 1,
+    "presenters": [1]
+  }, {
+   "id": 103,
+   "onDay": 2,
+   "startTime": "9:45",
+   "endTime": "10:15",
+   "name": "Enterprise iPaas",
+   "description": "",
+   "labels": [1],
+   "stream": null,
+   "room": 1,
+   "presenters": [12]
+  }, {
+   "id": 104,
+   "onDay": 2,
+   "startTime": "10:15",
+   "endTime": "10:30",
+   "name": "Team Photo Session",
+   "description": "",
+   "labels": [1],
+   "stream": null,
+   "room": 7,
+   "presenters": []
+  }, {
     "id": 105,
     "onDay": 2,
     "startTime": "10:30",
-    "endTime": "12:00",
-    "name": "First Cloud Stream D2",
-    "description": "First sample lecture from Cloud Stream D2",
-    "labels": [1],
-    "stream": 2
+    "endTime": "10:45",
+    "name": "Coffee break",
+    "description": "Opportunity to wake up and do some networking",
+    "labels": [5, 2],
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 106,
     "onDay": 2,
@@ -235,7 +212,9 @@
     "name": "Lunch",
     "description": "Enjoy your meal",
     "labels": [5],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 107,
     "onDay": 2,
@@ -244,43 +223,20 @@
     "name": "Guest",
     "description": "Guest lecture",
     "labels": [1],
-    "stream": null
-  },{
-    "id": 108,
-    "onDay": 2,
-    "startTime": "13:45",
-    "endTime": "14:45",
-    "name": "Second Web Innovation Stream D2",
-    "description": "Second sample lecture from Web Innovation Stream D2",
-    "labels": [1],
-    "stream": 1
-  },{
-    "id": 109,
-    "onDay": 2,
-    "startTime": "13:45",
-    "endTime": "14:45",
-    "name": "Second Cloud Stream D2",
-    "description": "Second sample lecture from Cloud Stream D2",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": 1,
+    "presenters": []
   },{
     "id": 110,
     "onDay": 2,
     "startTime": "14:45",
     "endTime": "15:45",
-    "name": "Third Web Innovation Stream D2",
-    "description": "Third sample lecture from Web Innovation Stream D2 (country side?)",
+    "name": "Stream Session in the field",
+    "description": "Lets talk on fresh air.",
     "labels": [1],
-    "stream": 1
-  },{
-    "id": 111,
-    "onDay": 2,
-    "startTime": "14:45",
-    "endTime": "15:45",
-    "name": "Third Cloud Stream D2",
-    "description": "Third sample lecture from Cloud Stream D2  (country side?)",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": 7,
+    "presenters": [13]
   },{
     "id": 112,
     "onDay": 2,
@@ -289,25 +245,9 @@
     "name": "Coffee break",
     "description": "Opportunity to wake up and do some networking",
     "labels": [5, 2],
-    "stream": null
-  },{
-    "id": 113,
-    "onDay": 2,
-    "startTime": "16:00",
-    "endTime": "17:45",
-    "name": "Fourth Web Innovation Stream D2",
-    "description": "Fourth sample lecture from Web Innovation Stream D2",
-    "labels": [1],
-    "stream": 1
-  },{
-    "id": 114,
-    "onDay": 2,
-    "startTime": "16:00",
-    "endTime": "17:45",
-    "name": "Fourth Cloud Stream D2",
-    "description": "Fourth sample lecture from Cloud Stream D2",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 115,
     "onDay": 2,
@@ -316,7 +256,9 @@
     "name": "Closing of Day 2",
     "description": "Description for Closing of Day 2",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [11]
   },{
     "id": 116,
     "onDay": 2,
@@ -325,7 +267,9 @@
     "name": "Break",
     "description": "",
     "labels": [2],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 117,
     "onDay": 2,
@@ -334,7 +278,9 @@
     "name": "Dinner",
     "description": "Enjoy your meal",
     "labels": [5],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },
 
 
@@ -352,28 +298,12 @@
     "onDay": 3,
     "startTime": "8:15",
     "endTime": "8:30",
-    "name": "Welcome day 3",
-    "description": "Description for 'Welcome day 3'",
+    "name": "Local Community Refresh",
+    "description": "Description for 'Local Community Refresh'",
     "labels": [1],
-    "stream": null
-  },{
-    "id": 202,
-    "onDay": 3,
-    "startTime": "8:30",
-    "endTime": "9:30",
-    "name": "First Web Innovation Stream D3",
-    "description": "First sample lecture from Web Innovation Stream D3",
-    "labels": [1],
-    "stream": 1
-  },{
-    "id": 203,
-    "onDay": 3,
-    "startTime": "8:30",
-    "endTime": "9:30",
-    "name": "First Cloud Stream D3",
-    "description": "First sample lecture from Cloud Stream D3",
-    "labels": [1],
-    "stream": 2
+    "stream": null,
+    "room": 1,
+    "presenters": []
   },{
     "id": 204,
     "onDay": 3,
@@ -382,7 +312,9 @@
     "name": "Stream results 1-3",
     "description": "Description for 'Stream results 1-3'",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [13]
   },{
     "id": 205,
     "onDay": 3,
@@ -391,7 +323,9 @@
     "name": "Coffee break",
     "description": "Opportunity to wake up and do some networking",
     "labels": [5, 2],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   },{
     "id": 206,
     "onDay": 3,
@@ -400,7 +334,9 @@
     "name": "Stream results 4-6",
     "description": "Description for 'Stream results 4-6'",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [13]
   },{
     "id": 207,
     "onDay": 3,
@@ -409,7 +345,9 @@
     "name": "Feedback and Closing of Summit",
     "description": "Description for 'Feedback and Closing of Summit'",
     "labels": [1],
-    "stream": null
+    "stream": null,
+    "room": 1,
+    "presenters": [11]
   },{
     "id": 208,
     "onDay": 3,
@@ -418,7 +356,9 @@
     "name": "Lunch",
     "description": "Enjoy your meal",
     "labels": [5],
-    "stream": null
+    "stream": null,
+    "room": null,
+    "presenters": []
   }],
 
 
@@ -446,31 +386,117 @@
     "id": 1,
     "name": "Web Innovation",
     "hashtag": "webinnovation",
+    "room": 4,
+    "leaders": [1],
     "description": "The web develops faster then ever. Web browsers are becoming great platforms full of new APIs which bring brand new opportunities to offer to our customers. Imagine an application runs in a web browser and is capable of working offline and synchronizing its state once online. Imagine the application behaves on your mobile as if it were a native app: you can add it to your home screen and you get push notifications. Imagine you can build reusable, browser native UI components you can share across your organization or even across the whole web world. And this is just the beginning."
   }, {
     "id": 2,
     "name": "Hybrid Cloud",
     "hashtag": "enterprisecloud",
+    "room": 1,
+    "leaders": [6, 7],
     "description": "IT orchestration with hybrid cloud solutions will be the focus of our business, combined with IPaaS, Capgemini’s future platform to develop, execute and manage integration, our Cloud Choice offering for E2E solutions (Advise, Align Animate) and our tools for SW-Automation with DevOps, Microservices and automated provisioning."
   }, {
     "id": 3,
     "name": "Digital Security",
     "hashtag": "itsecurity",
+    "room": 2,
+    "leaders": [2, 3],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   }, {
     "id": 4,
     "name": "Architects",
     "hashtag": "itarchitecture",
+    "room": 3,
+    "leaders": [4, 5],
     "description": "Let‘s Become an Architects‘ Company! Digital transformation, Agile & DevOps, Rightshoring and Industrialization – what shapes the architects’ way they work and the architects’ company of tomorrow? Career model, certifications, trainings, roles in ACCESS – the journey already started … We create the vision for Capgemini as a company of architecture excellence!"
   }, {
     "id": 5,
     "name": "Transform Business",
     "hashtag": "digitalization",
+    "room": 5,
+    "leaders": [7, 8],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
   }, {
     "id": 6,
     "name": "IoT",
     "hashtag": "IoT",
+    "room": 6,
+    "leaders": [9, 10],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+  }],
+  "rooms": [{
+    "id": 1,
+    "name": "Rhein Main"
+  }, {
+    "id": 2,
+    "name": "Schönefeld 1"
+  }, {
+    "id": 3,
+    "name": "Schönefeld 2"
+  }, {
+    "id": 4,
+    "name": "Tempelhof 1"
+  }, {
+    "id": 5,
+    "name": "Tempelhof 2"
+  }, {
+    "id": 6,
+    "name": "Echterdingen"
+  }, {
+    "id": 7,
+    "name": "Country side"
+  }],
+  "persons": [{
+    "id": 1,
+    "name": "Marek Matczak"
+  }, {
+    "id": 2,
+    "name": "Michael Köhler"
+  }, {
+    "id": 3,
+    "name": "Marek Puchalski"
+  }, {
+    "id": 4,
+    "name": "Thilo Hermann"
+  }, {
+    "id": 5,
+    "name": "Andreas Hess"
+  }, {
+    "id": 6,
+    "name": "Marius Vöhringer"
+  }, {
+    "id": 7,
+    "name": "Gerd Pews"
+  }, {
+    "id": 8,
+    "name": " Christian Hinken"
+  }, {
+    "id": 9,
+    "name": "Rüdiger Eberlein"
+  }, {
+    "id": 10,
+    "name": "Robert Geisler"
+  }, {
+    "id": 11,
+    "name": "Marco Rose"
+  }, {
+    "id": 12,
+    "name": "UK-team"
+  }, {
+    "id": 13,
+    "name": "Streamleads"
+  }, {
+    "id": 14,
+    "name": "Thomas Heimann"
+  }, {
+    "id": 15,
+    "name": "Uwe Dumslaff"
+  }, {
+    "id": 16,
+    "name": "Roland Fiege"
+  }, {
+    "id": 17,
+    "name": "Iwan van der Kleijn"
   }]
 }

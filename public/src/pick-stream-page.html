@@ -535,24 +535,24 @@
         font-size: 16px;
       }
 
-      :host ul {
+      :host paper-item {
         padding: 0px;
         margin: 0px;
       }
-      :host ul li {
-        list-style-type: none;
-      }
+
       :host .card:hover {
         cursor: pointer;
-      }
-      :host .iron-selected .card {
-        background-color: var(--app-highlight-color);
       }
 
       :host paper-item .show-descr {
         white-space: normal;
       }
       .card {
+        padding-bottom: 8px;
+      }
+
+      .room {
+        color: gray;
         padding-bottom: 8px;
       }
 
@@ -574,7 +574,9 @@
 
       <div role="listbox">
         <template is="dom-repeat" items="{{_getStreams(eventData)}}" initial-count="1">
-          <paper-item class="card">
+          <div class="card">
+
+          <paper-item>
               <paper-item-body two-line="">
                 <div class="layout horizontal">
                  <div class="layout vertical">
@@ -591,7 +593,6 @@
                </div>
 
               <div on-tap="_showHide">
-                <paper-ripple></paper-ripple>
                 <div secondary="" class$="{{_classForDescription(item, showState)}}">{{item.description}}</div>
                 <div class="flex layout horizontal center end-justified">
                   <template is="dom-if" if="{{_isCollapsed(item, showState)}}">
@@ -604,14 +605,25 @@
               </div>
 
               </paper-item-body>
-
-            
           </paper-item>
+
+          <div class="leader">
+            <iron-icon icon="account-circle"></iron-icon>
+            {{_getLeaders(item, eventData)}}
+          </div>
+
+          <div class="room">
+            <iron-icon icon="event-seat"></iron-icon>
+            {{_getRoomName(item, eventData)}}
+          </div>
+        </div>
+
+
         </template>
       </div>
 
   </template>
 
-  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object,showState:{type:Object,value:{}}},_getStreams:function(t){return t.streams||[]},_classForDescription:function(t,e){return e[t.id]?"toggle-area show-descr":"toggle-area"},_tweetUrl:function(t){return"https://twitter.com/hashtag/"+t.hashtag},_isCollapsed:function(t,e){return!!e[t.id]},_showHide:function(t){var e=t.model.item,s={};s[e.id]=!this.showState[e.id],this.set("showState",Object.assign({},this.showState,s))}});</script>
+  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object,showState:{type:Object,value:{}}},_getStreams:function(t){return t.streams||[]},_getRoomName:function(t,e){return e.rooms.filter(function(e){return e.id===t.room})[0].name},_getLeaders:function(t,e){return t.leaders.map(function(t){return e.persons.filter(function(e){return e.id===t})[0].name}).join(" / ")},_classForDescription:function(t,e){return e[t.id]?"toggle-area show-descr":"toggle-area"},_tweetUrl:function(t){return"https://twitter.com/hashtag/"+t.hashtag},_isCollapsed:function(t,e){return!!e[t.id]},_showHide:function(t){var e=t.model.item,r={};r[e.id]=!this.showState[e.id],this.set("showState",Object.assign({},this.showState,r))}});</script>
 </dom-module>
 </body></html>
