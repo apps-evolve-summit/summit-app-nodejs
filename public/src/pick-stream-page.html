@@ -624,6 +624,6 @@
 
   </template>
 
-  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object,showState:{type:Object,value:{}}},_getStreams:function(t){return t.streams||[]},_getRoomName:function(t,e){return e.rooms.filter(function(e){return e.id===t.room})[0].name},_getLeaders:function(t,e){return t.leaders.map(function(t){return e.persons.filter(function(e){return e.id===t})[0].name}).join(" / ")},_classForDescription:function(t,e){return e[t.id]?"toggle-area show-descr":"toggle-area"},_tweetUrl:function(t){return"https://twitter.com/hashtag/"+t.hashtag},_isCollapsed:function(t,e){return!!e[t.id]},_showHide:function(t){var e=t.model.item,r={};r[e.id]=!this.showState[e.id],this.set("showState",Object.assign({},this.showState,r))}});</script>
+  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object,showState:{type:Object,value:{}}},_getStreams:function(t){return t.streams||[]},_getRoomName:function(t,e){var r=e.rooms.filter(function(e){return e.id===t.room})[0];return r?r.name:""},_getLeaders:function(t,e){return t.leaders.map(function(t){return e.persons.filter(function(e){return e.id===t})[0].name}).join(" / ")},_classForDescription:function(t,e){return e[t.id]?"toggle-area show-descr":"toggle-area"},_tweetUrl:function(t){return"https://twitter.com/hashtag/"+t.hashtag},_isCollapsed:function(t,e){return!!e[t.id]},_showHide:function(t){var e=t.model.item,r={};r[e.id]=!this.showState[e.id],this.set("showState",Object.assign({},this.showState,r))}});</script>
 </dom-module>
 </body></html>
