@@ -388,42 +388,42 @@
     "hashtag": "webinnovation",
     "room": 4,
     "leaders": [1],
-    "description": "The web develops faster then ever. Web browsers are becoming great platforms full of new APIs which bring brand new opportunities to offer to our customers. Imagine an application runs in a web browser and is capable of working offline and synchronizing its state once online. Imagine the application behaves on your mobile as if it were a native app: you can add it to your home screen and you get push notifications. Imagine you can build reusable, browser native UI components you can share across your organization or even across the whole web world. And this is just the beginning."
+    "description": "The web develops faster than ever. Web browsers are becoming great platforms full of new APIs which bring brand new opportunities to offer to our customers. Imagine an application runs in a web browser and is capable of working offline and synchronizing its state once online. Imagine the application behaves on your mobile as if it were a native app: you can add it to your home screen and you get push notifications. Imagine you can build reusable, browser native UI components you can share across your organization or even across the whole web world. And this is just the beginning."
   }, {
     "id": 2,
-    "name": "Hybrid Cloud",
+    "name": "IT orchestration for hybrid clouds",
     "hashtag": "enterprisecloud",
     "room": 1,
     "leaders": [6, 7],
     "description": "IT orchestration with hybrid cloud solutions will be the focus of our business, combined with IPaaS, Capgemini’s future platform to develop, execute and manage integration, our Cloud Choice offering for E2E solutions (Advise, Align Animate) and our tools for SW-Automation with DevOps, Microservices and automated provisioning."
   }, {
     "id": 3,
-    "name": "Digital Security",
+    "name": "Engineering and digital security",
     "hashtag": "itsecurity",
     "room": 2,
     "leaders": [2, 3],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    "description": "Prevent – Protect - Detect – Monitor. How to identify threats and find the right measures to improve security. Cybersecurity is a necessary ingredients of the digitalization. Only the trustable service will be successful. We want to define aspects in architecture and methods, where we can make a difference in security and generate a vision for our future security model."
   }, {
     "id": 4,
-    "name": "Architects",
+    "name": "Let‘s Become an Architects‘ Company",
     "hashtag": "itarchitecture",
     "room": 3,
     "leaders": [4, 5],
     "description": "Let‘s Become an Architects‘ Company! Digital transformation, Agile & DevOps, Rightshoring and Industrialization – what shapes the architects’ way they work and the architects’ company of tomorrow? Career model, certifications, trainings, roles in ACCESS – the journey already started … We create the vision for Capgemini as a company of architecture excellence!"
   }, {
     "id": 5,
-    "name": "Transform Business",
+    "name": "Transforming Business for Digital",
     "hashtag": "digitalization",
     "room": 5,
     "leaders": [7, 8],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    "image": "/images/transform.jpg"
   }, {
     "id": 6,
-    "name": "IoT",
+    "name": "Industrial IoT",
     "hashtag": "IoT",
     "room": 6,
     "leaders": [9, 10],
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    "description": "IoT revolutionizes the way enterprises operate their business. Smart machines requesting maintenance the best point in time, buildings optimizing conditions like climate, temperature and other themselves, cars reserving parking places are but a few examples. We consider new IT concepts and architectures to enable powerful IoT platforms like digital twins, different types of connectivity, event processing and machine learning. We discuss the challenges in architecting and developing IoT solutions with regard to build, deploy and test."
   }],
   "rooms": [{
     "id": 1,

@@ -521,7 +521,7 @@
 </iron-iconset-svg>
 </div><dom-module id="summit-pick-stream">
   <template>
-    <style include="shared-styles iron-flex iron-flex-alignment">
+    <style include="shared-styles iron-flex iron-flex-alignment iron-flex-factors">
       :host {
         display: block;
         padding: 8px;
@@ -538,10 +538,6 @@
       :host paper-item {
         padding: 0px;
         margin: 0px;
-      }
-
-      :host .card:hover {
-        cursor: pointer;
       }
 
       :host paper-item .show-descr {
@@ -563,6 +559,15 @@
       .toggle-area {
         text-overflow: ellipsis;
         display: inline;
+        cursor: pointer;
+      }
+      iron-icon.toggle {
+        cursor: pointer;
+      }
+
+      .twitter {
+        margin: 5px;
+        cursor: pointer;
       }
 
 
@@ -579,19 +584,17 @@
           <paper-item>
               <paper-item-body two-line="">
                 <div class="layout horizontal">
-                 <div class="layout vertical">
-                   <h3>{{item.name}}</h3>
-                 </div>
+                   <h1 style="white-space: normal" class="">{{item.name}}</h1>
 
-                 <div class="flex layout horizontal center end-justified">
-                    
-                    <a name="twitter" href$="{{_tweetUrl(item)}}" target="_blank">
-                      <iron-icon icon="brands:twitter"></iron-icon>
-                    </a>
-                 </div>
-
+                   <div class="flex layout horizontal center end-justified">
+                      
+                      <a name="twitter" href$="{{_tweetUrl(item)}}" target="_blank">
+                        <iron-icon icon="brands:twitter"></iron-icon>
+                      </a>
+                   </div>
                </div>
 
+            <template is="dom-if" if="{{item.description}}">
               <div on-tap="_showHide">
                 <div secondary="" class$="{{_classForDescription(item, showState)}}">{{item.description}}</div>
                 <div class="flex layout horizontal center end-justified">
@@ -603,6 +606,11 @@
                   </template>
                 </div>
               </div>
+            </template>
+
+            <template is="dom-if" if="{{item.image}}">
+              <img style="max-width: 100%" src="{{item.image}}" alt="">
+            </template>
 
               </paper-item-body>
           </paper-item>
@@ -624,6 +632,6 @@
 
   </template>
 
-  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object,showState:{type:Object,value:{}}},_getStreams:function(t){return t.streams||[]},_getRoomName:function(t,e){var r=e.rooms.filter(function(e){return e.id===t.room})[0];return r?r.name:""},_getLeaders:function(t,e){return t.leaders.map(function(t){return e.persons.filter(function(e){return e.id===t})[0].name}).join(" / ")},_classForDescription:function(t,e){return e[t.id]?"toggle-area show-descr":"toggle-area"},_tweetUrl:function(t){return"https://twitter.com/hashtag/"+t.hashtag},_isCollapsed:function(t,e){return!!e[t.id]},_showHide:function(t){var e=t.model.item,r={};r[e.id]=!this.showState[e.id],this.set("showState",Object.assign({},this.showState,r))}});</script>
+  <script>Polymer({is:"summit-pick-stream",properties:{eventData:Object,currentProfile:Object,showState:{type:Object,value:{}}},_getStreams:function(t){return t.streams||[]},_getRoomName:function(t,e){var r=e.rooms.filter(function(e){return e.id===t.room})[0];return r?r.name:""},_getLeaders:function(t,e){return t.leaders.map(function(t){return e.persons.filter(function(e){return e.id===t})[0].name}).join(" / ")},_classForDescription:function(t,e){return e[t.id]?"toggle-area show-descr":"toggle-area"},_tweetUrl:function(t){return"https://twitter.com/search?q=%23CAS_DE2017%20%23"+t.hashtag},_isCollapsed:function(t,e){return!!e[t.id]},_showHide:function(t){var e=t.model.item,r={};r[e.id]=!this.showState[e.id],this.set("showState",Object.assign({},this.showState,r))}});</script>
 </dom-module>
 </body></html>

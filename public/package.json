@@ -1,5 +1,6 @@
 {
   "name": "apps-evolve-2017",
+  "version": "0.0.1",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "eslint": "^3.12.0",
