@@ -317,7 +317,7 @@
     </div>
 
     <div id="scrollRoot">
-    <iron-list id="list" items="[[_getTimeSlots(eventData, currentProfile, day)]]" as="item">
+    <iron-list id="list" items="[[_getTimeSlots(eventData, currentProfile, day)]]" as="item" selection-enabled="" multi-selection="">
        <template>
          <div>
            <div class$="[[_classForItem(item, selected)]]">
