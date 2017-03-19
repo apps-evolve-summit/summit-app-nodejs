@@ -15,6 +15,7 @@ app.get('/say-hello', function (req, res) {
 const webpush = require('web-push'),
       bodyParser = require('body-parser'),
       file = require('fs'),
+      nodeSchedule = require('node-schedule'),
       options = {
           vapidDetails: {
               subject: 'http://www.google.com',
@@ -32,7 +33,12 @@ app.use(bodyParser.json());
 app.post('/push/:title/:msg', (req, res) => {
     var title = req.params.title,
         msg = req.params.msg;
+    push(title, msg);
+    res.send(`Sent ${title}: ${msg}.`);
+});
 
+
+function push(title, msg) {
     getAllSubscriptions().forEach(subscriber => {
         console.log(`Sending to ${subscriber.endpoint}...`);
         webpush.sendNotification(
@@ -47,9 +53,7 @@ app.post('/push/:title/:msg', (req, res) => {
                 console.log('Error while pushing to [' + subscriber.endpoint + ']: ' + err.statusCode + ', ' + err.body);
             });
     });
-    res.send(`Sent ${title}: ${msg}.`);
-});
-
+}
 
 function getAllSubscriptions() {
     var fileContent, allSubscriptions;
@@ -80,6 +84,20 @@ app.post('/unregisterSubscription', (req, res) => {
     file.writeFileSync(subscriptionsFileName, JSON.stringify(allSubscriptions), {flag: 'w+' });
     res.status(200).send({success: true});
 });
+
+function schedule(day, h, m, type) {
+    nodeSchedule.scheduleJob(new Date(2017, 2, day, h, m, 0), () => {
+        console.log(`Sending ${type}`);
+        push('Break', type)});
+}
+
+schedule(23, 12, 15, 'Lunch');
+schedule(23, 15, 30, 'Coffee Break');
+schedule(24, 10, 30, 'Coffee Break');
+schedule(24, 12, 00, 'Lunch');
+schedule(24, 15, 45, 'Coffee Break');
+schedule(25, 10, 30, 'Coffee Break');
+schedule(25, 12, 30, 'Lunch');
 
 
 var server = app.listen(port, function () {
