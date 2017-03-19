@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "express": "^4.13.3",
-    "express-history-api-fallback": "^2.1.0"
+    "express-history-api-fallback": "^2.1.0",
+    "body-parser": "^1.16.1",
+    "web-push": "^3.2.2"
   },
   "devDependencies": {}
 }
