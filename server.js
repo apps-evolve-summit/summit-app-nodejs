@@ -14,6 +14,7 @@ app.get('/say-hello', function (req, res) {
 
 const webpush = require('web-push'),
       bodyParser = require('body-parser'),
+      file = require('fs'),
       options = {
           vapidDetails: {
               subject: 'http://www.google.com',
@@ -21,8 +22,8 @@ const webpush = require('web-push'),
               privateKey: 'UGU2kXUSbtRVFxDuqNpbSVfzU3C6RrRznJXi3e6G_tM'
           },
           TTL: 60 * 60
-      };
-var subscriptions = [];
+      },
+      subscriptionsFileName = './subscriptions/subscriptions.json';
 
 
 app.use(bodyParser.json());
@@ -32,7 +33,7 @@ app.post('/push/:title/:msg', (req, res) => {
     var title = req.params.title,
         msg = req.params.msg;
 
-    subscriptions.forEach(subscriber => {
+    getAllSubscriptions().forEach(subscriber => {
         console.log(`Sending to ${subscriber.endpoint}...`);
         webpush.sendNotification(
             subscriber,
@@ -50,14 +51,33 @@ app.post('/push/:title/:msg', (req, res) => {
 });
 
 
+function getAllSubscriptions() {
+    var fileContent, allSubscriptions;
+
+    if (!file.existsSync(subscriptionsFileName)) {
+        return [];
+    }
+    fileContent = file.readFileSync(subscriptionsFileName, 'utf8');
+    if (fileContent.length == 0) {
+        return [];
+    }
+    allSubscriptions = JSON.parse(fileContent);
+    return Array.isArray(allSubscriptions) ? allSubscriptions : [];
+}
+
 app.post('/registerSubscription', (req, res) => {
-    subscriptions.push(req.body.subscription);
+    var allSubscriptions = getAllSubscriptions();
+
+    allSubscriptions.push(req.body.subscription);
+    file.writeFileSync(subscriptionsFileName, JSON.stringify(allSubscriptions), {flag: 'w+' });
     res.status(200).send({success: true});
 });
 
 app.post('/unregisterSubscription', (req, res) => {
-    var subscriptionObject = req.body.subscription;
-    subscriptions = subscriptions.filter(el => el.endpoint !== subscriptionObject.endpoint);
+    var subscriptionObject = req.body.subscription,
+        allSubscriptions = getAllSubscriptions().filter(el => el.endpoint !== subscriptionObject.endpoint);
+
+    file.writeFileSync(subscriptionsFileName, JSON.stringify(allSubscriptions), {flag: 'w+' });
     res.status(200).send({success: true});
 });
 
