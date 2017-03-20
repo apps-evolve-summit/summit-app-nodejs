@@ -3,10 +3,12 @@ var app = express();
 var port = process.env.port || 1337;
 var path = require('path');
 var fallback = require('express-history-api-fallback');
+var nocache = require('nocache');
 var root = path.join(__dirname, 'public');
 
 app.use(express.static(root));
 app.use(fallback('index.html', {root: root}));
+app.use(nocache());
 
 app.get('/say-hello', function (req, res) {
     res.send('Hello World!');
