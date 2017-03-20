@@ -16,7 +16,6 @@ app.get('/say-hello', function (req, res) {
 
 const webpush = require('web-push'),
       bodyParser = require('body-parser'),
-      file = require('fs'),
       nodeSchedule = require('node-schedule'),
       options = {
           vapidDetails: {
@@ -25,12 +24,11 @@ const webpush = require('web-push'),
               privateKey: 'UGU2kXUSbtRVFxDuqNpbSVfzU3C6RrRznJXi3e6G_tM'
           },
           TTL: 60 * 60
-      },
-      subscriptionsFileName = './subscriptions/subscriptions.json';
+      };
 
+var subscriptions = [];
 
 app.use(bodyParser.json());
-
 
 app.post('/push/:title/:msg', (req, res) => {
     var title = req.params.title,
@@ -41,7 +39,7 @@ app.post('/push/:title/:msg', (req, res) => {
 
 
 function push(title, msg) {
-    getAllSubscriptions().forEach(subscriber => {
+    subscriptions.forEach(subscriber => {
         console.log(`Sending to ${subscriber.endpoint}...`);
         webpush.sendNotification(
             subscriber,
@@ -57,40 +55,24 @@ function push(title, msg) {
     });
 }
 
-function getAllSubscriptions() {
-    var fileContent, allSubscriptions;
-
-    if (!file.existsSync(subscriptionsFileName)) {
-        return [];
-    }
-    fileContent = file.readFileSync(subscriptionsFileName, 'utf8');
-    if (fileContent.length == 0) {
-        return [];
-    }
-    allSubscriptions = JSON.parse(fileContent);
-    return Array.isArray(allSubscriptions) ? allSubscriptions : [];
-}
-
 app.post('/registerSubscription', (req, res) => {
-    var allSubscriptions = getAllSubscriptions();
-
-    allSubscriptions.push(req.body.subscription);
-    file.writeFileSync(subscriptionsFileName, JSON.stringify(allSubscriptions), {flag: 'w+' });
+    subscriptions.push(req.body.subscription);
     res.status(200).send({success: true});
 });
 
 app.post('/unregisterSubscription', (req, res) => {
-    var subscriptionObject = req.body.subscription,
-        allSubscriptions = getAllSubscriptions().filter(el => el.endpoint !== subscriptionObject.endpoint);
+    var subscriptionObject = req.body.subscription;
 
-    file.writeFileSync(subscriptionsFileName, JSON.stringify(allSubscriptions), {flag: 'w+' });
+    subscriptions = subscriptions.filter(el =>
+        el.endpoint !== subscriptionObject.endpoint);
     res.status(200).send({success: true});
 });
 
 function schedule(day, h, m, type) {
     nodeSchedule.scheduleJob(new Date(2017, 2, day, h, m, 0), () => {
         console.log(`Sending ${type}`);
-        push('Break', type)});
+        push('Break', type);
+    });
 }
 
 schedule(23, 12, 15, 'Lunch');
