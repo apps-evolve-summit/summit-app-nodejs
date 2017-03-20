@@ -4,19 +4,19 @@
     "name": "Day 1",
     "date": "23-03-2017",
     "dayOfWeek": "Thursday",
-    "description": "Welcome day with preliminary lectures and initial stream specific discussions. Proposal: Maybe some description here to sum up the main day events. We can also add tabs here to show description or e.g. currently ongoing session and 2 next ones."
+    "description": "Welcome day with preliminary lectures and initial stream specific discussions. The day will close with a presentation of the stream goals."
   },{
     "id": 2,
     "name": "Day 2",
     "date": "24-03-2017",
     "dayOfWeek": "Friday",
-    "description": "Proposal: Maybe some description here to sum up the main day events. We can also add tabs here to show description or e.g. currently ongoing session and 2 next ones."
+    "description": "Latest news on iCSD program and how last summits achievements have been used. A presentation of Enterprise iPaas digital platform and the PoV regarding digital business will be presented by a guest from CC. The majority of time will be used for work in stream sessions."
   },{
     "id": 3,
     "name": "Day 3",
     "date": "25-03-2017",
     "dayOfWeek": "Saturday",
-    "description": "Proposal: Maybe some description here to sum up the main day events. We can also add tabs here to show description or e.g. currently ongoing session and 2 next ones."
+    "description": "A short morning welcome with an anouncement will lead us to the final stream-sessions. Afterwards each stream gets some time to present its results and outlook to the audience. Feedback and goodbye."
   }],
 
   "timeSlots": [{
@@ -39,14 +39,14 @@
     "labels": [1],
     "stream": null,
     "room": 1,
-    "presenters": [1, 11]
+    "presenters": [11, 1]
   },{
     "id": 3,
     "onDay": 1,
     "startTime": "10:15",
     "endTime": "10:45",
-    "name": "CG-Architects Go Inside Out",
-    "description": "Description for 'CG-Architects Go Inside Out'",
+    "name": "CG-Architects gain Visibility",
+    "description": "Approach and activities 2017 to achieve more visibility of Capgemini Architecture & Engineering expertise in the Apps DE market.",
     "labels": [1],
     "stream": null,
     "room": 1,
@@ -67,12 +67,12 @@
     "onDay": 1,
     "startTime": "13:00",
     "endTime": "13:30",
-    "name": "Greetings from CTO",
-    "description": "Description for 'Greetings from CTO'",
+    "name": "Web Innovations",
+    "description": "The browser - our new application container. Embrace Web APIs.",
     "labels": [1],
     "stream": null,
     "room": 1,
-    "presenters": [15]
+    "presenters": [1]
   },{
     "id": 8,
     "onDay": 1,
@@ -100,8 +100,8 @@
     "onDay": 1,
     "startTime": "17:15",
     "endTime": "18:45",
-    "name": "Stream report out",
-    "description": "Each stream gives a 15 minutes summary of their discussions, shares established goals",
+    "name": "Stream Goals",
+    "description": "Each stream gives a 15 minutes summary of their agenda, goals, expectations and first findings",
     "labels": [1],
     "stream": null,
     "room": 1,
@@ -112,7 +112,7 @@
     "startTime": "18:45",
     "endTime": "19:00",
     "name": "Closing of Day 1",
-    "description": "Description for Closing of Day 1",
+    "description": "Day summary and few more organisational points",
     "labels": [1],
     "stream": null,
     "room": 1,
@@ -153,31 +153,31 @@
     "id": 101,
     "onDay": 2,
     "startTime": "8:30",
-    "endTime": "9:15",
-    "name": "Report Back Summit 2016",
-    "description": "Summary from the previous summit",
+    "endTime": "9:10",
+    "name": "iCSD products",
+    "description": "Report back how results from previous summit on microservices have been used in iCSD initiative.",
     "labels": [1],
     "stream": null,
     "room": 1,
-    "presenters": [17]
+    "presenters": [17, 18]
   }, {
     "id": 102,
     "onDay": 2,
-    "startTime": "9:15",
-    "endTime": "9:45",
+    "startTime": "9:10",
+    "endTime": "9:30",
     "name": "Major change in iCSD: centers",
-    "description": "What waits for our organization in near future",
+    "description": "Win the market challenge with strong CSD capabilities delivered by iCSD centers",
     "labels": [1],
     "stream": null,
     "room": 1,
-    "presenters": [1]
+    "presenters": [4]
   }, {
    "id": 103,
    "onDay": 2,
-   "startTime": "9:45",
-   "endTime": "10:15",
+   "startTime": "9:30",
+   "endTime": "10:00",
    "name": "Enterprise iPaas",
-   "description": "",
+   "description": "News from EiPaas and a new delivery model",
    "labels": [1],
    "stream": null,
    "room": 1,
@@ -185,8 +185,8 @@
   }, {
    "id": 104,
    "onDay": 2,
-   "startTime": "10:15",
-   "endTime": "10:30",
+   "startTime": "10:00",
+   "endTime": "10:15",
    "name": "Team Photo Session",
    "description": "",
    "labels": [1],
@@ -196,8 +196,8 @@
   }, {
     "id": 105,
     "onDay": 2,
-    "startTime": "10:30",
-    "endTime": "10:45",
+    "startTime": "10:15",
+    "endTime": "10:30",
     "name": "Coffee break",
     "description": "Opportunity to wake up and do some networking",
     "labels": [5, 2],
@@ -220,14 +220,14 @@
     "onDay": 2,
     "startTime": "13:00",
     "endTime": "13:45",
-    "name": "Guest",
-    "description": "Guest lecture",
+    "name": "Digital Approach within Capgemini Consulting",
+    "description": "How does CC collaborate with clients to shape his digital agenda",
     "labels": [1],
     "stream": null,
     "room": 1,
-    "presenters": []
+    "presenters": [15]
   },{
-    "id": 110,
+    "id": 109,
     "onDay": 2,
     "startTime": "14:45",
     "endTime": "15:45",
@@ -238,7 +238,7 @@
     "room": 7,
     "presenters": [13]
   },{
-    "id": 112,
+    "id": 110,
     "onDay": 2,
     "startTime": "15:45",
     "endTime": "16:00",
@@ -248,17 +248,6 @@
     "stream": null,
     "room": null,
     "presenters": []
-  },{
-    "id": 115,
-    "onDay": 2,
-    "startTime": "17:45",
-    "endTime": "18:00",
-    "name": "Closing of Day 2",
-    "description": "Description for Closing of Day 2",
-    "labels": [1],
-    "stream": null,
-    "room": 1,
-    "presenters": [11]
   },{
     "id": 116,
     "onDay": 2,
@@ -298,12 +287,12 @@
     "onDay": 3,
     "startTime": "8:15",
     "endTime": "8:30",
-    "name": "Local Community Refresh",
-    "description": "Description for 'Local Community Refresh'",
+    "name": "Local Community Refreshment",
+    "description": "New refrehsing setup for local technical communities within Apps DE",
     "labels": [1],
     "stream": null,
     "room": 1,
-    "presenters": []
+    "presenters": [11]
   },{
     "id": 204,
     "onDay": 3,
@@ -343,7 +332,7 @@
     "startTime": "11:45",
     "endTime": "12:30",
     "name": "Feedback and Closing of Summit",
-    "description": "Description for 'Feedback and Closing of Summit'",
+    "description": "Raise your voice to comment on the last 20 hours and tell the crowd how you will act in the future to innovate and get visible",
     "labels": [1],
     "stream": null,
     "room": 1,
@@ -470,7 +459,7 @@
     "name": "Gerd Pews"
   }, {
     "id": 8,
-    "name": " Christian Hinken"
+    "name": "Christian Hinken"
   }, {
     "id": 9,
     "name": "Rüdiger Eberlein"
@@ -482,7 +471,7 @@
     "name": "Marco Rose"
   }, {
     "id": 12,
-    "name": "UK-team"
+    "name": "Alan Spittle"
   }, {
     "id": 13,
     "name": "Streamleads"
@@ -491,12 +480,15 @@
     "name": "Thomas Heimann"
   }, {
     "id": 15,
-    "name": "Uwe Dumslaff"
+    "name": "Tae Ho Shin"
   }, {
     "id": 16,
     "name": "Roland Fiege"
   }, {
     "id": 17,
     "name": "Iwan van der Kleijn"
+  }, {
+    "id": 18,
+    "name": "Uwe Hantzsche"
   }]
 }
