@@ -1,0 +1,16 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/social-icons.html">
+
+</head><body><dom-module id="push-activation">
+  <template>
+    <paper-icon-item on-tap="_tapSubscribePush">
+      <iron-icon id="subscribeButton" icon="social:notifications" item-icon=""></iron-icon>
+      Push Notifications
+    </paper-icon-item>
+  </template>
+
+  <script>Polymer({is:"push-activation",initialize:function(){"serviceWorker"in navigator&&"PushManager"in window?(this._supportsPush=!0,navigator.serviceWorker.getRegistration().then(function(i){i.pushManager.getSubscription().then(function(i){return i?console.log("Subscription details: "+JSON.stringify(i)):console.log("User is not subscribed!"),!!i}).then(this._updateSubscriptionButton.bind(this))}.bind(this))):console.error("Push notification NOT supported!")},_supportsPush:!1,_isSubscribed:!1,_publicServerKey:"BPOOvDThOUuSxiC-DuMv-WXG0XbSCwKR6Jux0CkyeyZ86OMF2U64VYKksNCJKoJdq1ISzYKfCUUxB6hKM0zeNGA",_updateSubscriptionButton:function(i){var t=this.$.subscribeButton;this._isSubscribed=i,t.icon=i?"social:notifications-active":"social:notifications-off",t.disabled=!1},_tapSubscribePush:function(i){this._supportsPush&&navigator.serviceWorker.getRegistration().then(function(){this.$.subscribeButton.disabled=!0,this._isSubscribed?this._unsubscribeUser():this._subscribeUser()}.bind(this))},_unsubscribeUser:function(){navigator.serviceWorker.getRegistration().then(function(i){i.pushManager.getSubscription().then(function(i){return i&&i.unsubscribe(),i}).then(this._unregisterSubscriptionOnServer).then(function(){this._updateSubscriptionButton(!1),console.log("User successfully unsubscribed")}.bind(this)).catch(function(i){console.error("Cannot unsubscribe user ",i)})}.bind(this))},_unregisterSubscriptionOnServer:function(i){return fetch("/unregisterSubscription",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({subscription:i})})},_subscribeUser:function(){navigator.serviceWorker.getRegistration().then(function(i){var t=this._urlB64ToUint8Array(this._publicServerKey);i.pushManager.subscribe({userVisibleOnly:!0,applicationServerKey:t}).then(this._registerSubscriptionOnServer).then(function(){console.log("User successfully subscribed"),this._updateSubscriptionButton(!0)}.bind(this)).catch(function(i){console.log("Unable to subscribe user ",i)})}.bind(this))},_urlB64ToUint8Array:function(i){const t="=".repeat((4-i.length%4)%4),e=(i+t).replace(/\-/g,"+").replace(/_/g,"/"),n=window.atob(e),s=new Uint8Array(n.length);for(var r=0;r<n.length;++r)s[r]=n.charCodeAt(r);return s},_registerSubscriptionOnServer:function(i){return fetch("/registerSubscription",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({subscription:i})})}});</script>
+</dom-module>
+</body></html>
